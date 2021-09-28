@@ -1,0 +1,38 @@
+{
+  "name": "fadrevo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "slaus",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.27.5",
+    "core-js": "^3.4.2",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.42.1",
+    "webpack": "^5.53.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slaus/gulp_starter_16.09.21.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slaus/gulp_starter_16.09.21/issues"
+  },
+  "homepage": "https://github.com/slaus/gulp_starter_16.09.21#readme",
+  "description": ""
+}

@@ -1,0 +1,75 @@
+$root-size: 15;
+$base-size: #{$root-size}px;
+
+@function rem($pixels, $context: $root-size) {
+  @return #{$pixels / $context}rem
+}
+
+@mixin font-face($name, $filename, $style, $weight) {
+  $folder: '../fonts/';
+  $filepath: $folder + $filename;
+  @font-face {
+    font-family: "#{$name}";
+    font-style: $style;
+    font-weight: $weight;
+
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+    url($filepath + ".woff") format('woff'),
+    url($filepath + ".ttf")  format('truetype'),
+    url($filepath + ".svg#" + $name + "") format('svg');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@include font-face('Roboto-Thin', 'Roboto-Thin', 'normal', '100');
+@include font-face('Roboto-Light', 'Roboto-Light', 'normal', '300');
+@include font-face('Roboto-Regular', 'Roboto-Regular', 'normal', '400');
+@include font-face('Roboto-Bold', 'Roboto-Bold', 'normal', '700');
+@include font-face('Roboto-Black', 'Roboto-Black', 'normal', '900');
+
+$font-thin: 'Roboto-Thin', sans-serif;
+$font-light: 'Roboto-Light', sans-serif;
+$font-regular: 'Roboto-Regular', sans-serif;
+$font-bold: 'Roboto-Bold', sans-serif;
+$font-black: 'Roboto-Black', sans-serif;
+
+$black: #373737 !default;
+$green: #0ed9ce !default;
+$blue: #42a7e3 !default;
+$blue-dark: #4460A0 !default;
+$white: #ffffff !default;
+$grey: #b9b9b9 !default;
+$grey-dark: #888686 !default;
+
+$linear: linear-gradient(91.55deg, $green 24.9%, $blue 81.66%);
+$box-shadow: 0 4px 11px rgba(0, 0, 0, 0.25);
+$text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+$dark-color: brightness(0.95);
+
+@mixin xs() {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+@mixin sm() {
+  @media (min-width: 576px) and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin md() {
+  @media (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin lg() {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin xl() {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

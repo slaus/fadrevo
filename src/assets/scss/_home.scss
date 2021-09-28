@@ -1,0 +1,119 @@
+/* HOME PAGE */
+
+.home {
+
+  .content {
+
+    &--logo {
+      display: block;
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &--title {
+      font-family: $font-bold;
+      font-size: rem(23);
+      line-height: rem(28);
+      text-align: center;
+      width: 100%;
+      max-width: 280px;
+      margin-top: 5px;
+      margin-bottom: 25px;
+    }
+
+    &--buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+
+        &-big {
+          font-size: rem(19);
+        }
+
+        &__facebook {
+          background: $blue-dark;
+        }
+
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &--hr {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 320px;
+      align-items: center;
+      font-size: rem(17);
+      line-height: rem(20);
+      text-transform: uppercase;
+      margin: 10px auto;
+      position: relative;
+
+      span {
+        display: block;
+        padding: 0 20px;
+        background: $white;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background: $black;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        z-index: -1;
+
+      }
+    }
+
+    &--is-register {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 25px;
+      font-size: rem(15);
+
+      & a {
+        margin-left: 5px;
+      }
+    }
+
+    &--agree {
+      display: block;
+      margin: 15px auto auto;
+      width: 100%;
+      max-width: 320px;
+      font-size: rem(14);
+      color: $grey-dark;
+
+      a {
+        color: $black;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .block-letter {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    display: flex;
+  }
+}
